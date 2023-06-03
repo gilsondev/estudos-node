@@ -3,7 +3,13 @@
 Projeto criado com base no [vídeo do Guido Cerqueira](https://www.youtube.com/watch?v=j8cm2C5-xn8) sobre criação de uma
 API com Node.js, Typescript e TypeORM.
 
-As tecnologias usadas são:
+![MER](./screenshots/mer.png)
+
+## Requisitos
+
+- [asdf](https://asdf-vm.com/guide/getting-started.html)
+
+As tecnologias usadas no projeto são:
 
 ### Desenvolvimento
 
@@ -20,3 +26,15 @@ As tecnologias usadas são:
 - Pg: Driver de banco de dados para Node.js que permite a interação com bancos de dados PostgreSQL
 - Dotenv: Uma biblioteca para carregar variáveis de ambiente a partir de um arquivo `.env`.
 - Reflect-metadata: Uma biblioteca que adiciona suporte a metadados ao JavaScript/TypeScript, útil para frameworks como o TypeORM.
+
+## Configuração
+
+Execute o comando `make setup`
+
+### Testes
+
+Para executar os testes
+
+### Outros comandos
+
+Para saber mais dos comandos disponíveis, execute `make help`

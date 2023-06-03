@@ -133,4 +133,4 @@ dist
 .DS_Store
 
 # Project Room
-./tutorials/room-system/data
+tutorials/room-system/data
