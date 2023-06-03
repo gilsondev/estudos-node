@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es2018", // Define a versão do ECMAScript que o TypeScript irá compilar.
+    "lib": [ // Define as bibliotecas incluídas no tempo de execução.
+      "es5",
+      "es6",
+      "ES2018"
+    ],
+    "experimentalDecorators": true, // Habilita o suporte a decoradores experimentais.
+    "emitDecoratorMetadata": true, // Habilita a emissão de metadados do decorador.
+    "module": "commonjs", // Define o sistema de módulos utilizado no código gerado.
+    "moduleResolution": "node", // Define a estratégia de resolução de módulos.
+    "resolveJsonModule": true, // Permite a importação de arquivos JSON como módulos.
+    "allowJs": true, // Permite a inclusão de arquivos JavaScript no projeto.
+    "outDir": "./dist", // Define o diretório de saída dos arquivos compilados.
+    "esModuleInterop": true, // Habilita a interoperabilidade entre os sistemas de módulos do ES6 e CommonJS.
+    "forceConsistentCasingInFileNames": true, // Garante consistência no uso de letras maiúsculas/minúsculas nos nomes de arquivos.
+    "strict": true, // Ativa um conjunto amplo de verificações de tipo rigorosas.
+    "noImplicitAny": true, // Impede a inferência implícita do tipo "any".
+    "strictPropertyInitialization": false // Não exige a inicialização explícita de propriedades de classe.
+  },
+  "include": [ // Define os arquivos a serem incluídos na compilação.
+    "src/**/*"
+  ],
+  "exclude": [ // Define os diretórios a serem excluídos da compilação.
+    "node_modules",
+    "dist",
+    "./coverage",
+    "__tests__",
+    "jest.config.js"
+  ],
+  "ts-node": {
+    "files": true // Habilita a execução de arquivos TypeScript diretamente com o ts-node.
+  }
+}
