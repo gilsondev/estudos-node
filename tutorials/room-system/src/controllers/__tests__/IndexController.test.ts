@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from ".";
+import app from "../..";
 
 describe("Room API", () => {
   it("healthcheck should return OK", async () => {

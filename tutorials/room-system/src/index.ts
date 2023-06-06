@@ -1,15 +1,11 @@
 import express, { Application, Request, Response } from "express";
 import { AppDataSource } from "./data-source";
+import routes from "./routes";
 
 const app: Application = express();
 
 app.use(express.json());
-
-app.get("/healthcheck", (req: Request, res: Response): void => {
-  res.json({
-    status: "OK",
-  });
-});
+app.use(routes);
 
 AppDataSource.initialize()
   .then(() => {
