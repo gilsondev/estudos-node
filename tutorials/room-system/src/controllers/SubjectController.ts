@@ -2,6 +2,17 @@ import { Request, Response } from "express";
 import { subjectRepository } from "../repositories/subjectRepository";
 
 export class SubjectController {
+  async list(req: Request, res: Response) {
+    try {
+      const subjects = await subjectRepository.find();
+      return res.json(subjects);
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({
+        message: "Internal Server Error",
+      });
+    }
+  }
   async create(req: Request, res: Response) {
     const { name } = req.body;
 

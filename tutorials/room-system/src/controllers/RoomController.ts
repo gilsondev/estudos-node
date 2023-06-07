@@ -83,7 +83,11 @@ export default class RoomController {
       const subject = await subjectRepository.findOneBy({
         id: Number(subject_id),
       });
-      const room = await roomRepository.findOneBy({ id: Number(idRoom) });
+
+      const room = await roomRepository.findOne({
+        where: { id: Number(idRoom) },
+        relations: ["subjects"],
+      });
 
       if (!subject) {
         return res.status(404).json({
@@ -97,14 +101,31 @@ export default class RoomController {
         });
       }
 
-      await roomRepository.update(
-        { id: Number(idRoom) },
-        {
-          subjects: [...room.subjects, subject],
-        }
-      );
+      const roomUpdate = {
+        ...room,
+        subjects: room.subjects ? [...room.subjects, subject] : [subject],
+      };
+
+      await roomRepository.save(roomUpdate);
 
       return res.status(200).json(room);
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({
+        message: "Internal Server Error",
+      });
+    }
+  }
+
+  async list(req: Request, res: Response) {
+    try {
+      const rooms = await roomRepository.find({
+        relations: {
+          subjects: true,
+          videos: true,
+        },
+      });
+      return res.status(200).json(rooms);
     } catch (error) {
       console.log(error);
       return res.status(500).json({
