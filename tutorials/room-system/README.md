@@ -1,5 +1,7 @@
 # Room System
 
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Room%20System&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fgilsondev%2Festudos-node%2Fmain%2Ftutorials%2Froom-system%2Froom-system-api.json)
+
 Projeto criado com base no [vídeo do Guido Cerqueira](https://www.youtube.com/watch?v=j8cm2C5-xn8) sobre criação de uma
 API com Node.js, Typescript e TypeORM.
 
@@ -31,10 +33,18 @@ As tecnologias usadas no projeto são:
 
 Execute o comando `make setup`
 
-### Testes
-
-Para executar os testes
-
 ### Outros comandos
 
 Para saber mais dos comandos disponíveis, execute `make help`
+
+## Rotas
+
+| Rota                          | Descrição                                           |
+| ----------------------------- | --------------------------------------------------- |
+| `GET /healthcheck`            | Rota que retorna o status do servidor               |
+| `GET /subject`                | Lista todos as matérias cadastradas                 |
+| `POST /subject`               | Cadastra uma nova matéria                           |
+| `GET /room`                   | Lista as salas cadastradas                          |
+| `POST /room`                  | Cadastra uma nova sala                              |
+| `POST /room/{idRoom}/video`   | Cadastra um novo vídeo e associa a uma sala pelo ID |
+| `POST /room/{idRoom}/subject` | Associa uma matéria a uma sala                      |
