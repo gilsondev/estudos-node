@@ -21,6 +21,8 @@ O repositório está organizado da seguinte maneira:
 
 
 - [Room System](./tutorials/room-system): Sistema que implementa uma API para cadastro de Salas, Matérias e Vídeos.
+- [Youtube Node Testes](./rocketseat/youtube-node-testes): Sistema de cadastro de usuários, usado como base para implementação
+de testes unitários.
 
 
 Cada projeto possui sua própria estrutura de diretórios e arquivos, juntamente com uma descrição detalhada de seu propósito e funcionalidades.
