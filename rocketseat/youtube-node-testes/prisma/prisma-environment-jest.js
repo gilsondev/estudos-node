@@ -11,8 +11,9 @@ require("dotenv").config({
 });
 
 class CustomEnvironment extends NodeEnvironment {
-  constructor(config) {
-    super(config);
+  constructor(config, context) {
+    super(config, context);
+    this.testPath = context.testPath;
     this.schema = `code_schema_${uuid()}`;
     console.log("schemas", this.schema);
     this.connectionString = `${process.env.DATABASE_URL}${this.schema}`;
