@@ -23,7 +23,7 @@ O repositório está organizado da seguinte maneira:
 - [Room System](./tutorials/room-system): Sistema que implementa uma API para cadastro de Salas, Matérias e Vídeos.
 - [Youtube Node Testes](./rocketseat/youtube-node-testes): Sistema de cadastro de usuários, usado como base para implementação.
 - [E3E Node](./rocketseat/e2enode): Pequeno projeto criado para demonstrar os conceitos de testes automatizados com Node.
-de testes unitários.
+- [Fastify Prisma](./tutorials/fastify-prisma): Sistema de uma API REST para cadastro de usuários e produtos.
 
 
 Cada projeto possui sua própria estrutura de diretórios e arquivos, juntamente com uma descrição detalhada de seu propósito e funcionalidades.
